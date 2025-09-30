@@ -10,6 +10,7 @@ const {
   getPlatform,
 } = require('../lib/')
 const { VERSION } = require('../config')
+
 bot.addCommand(
   {
     pattern: 'help ?(.*)',
@@ -24,7 +25,7 @@ bot.addCommand(
     })
     const [date, time] = getDate()
     let CMD_HELP = `╭────────────────╮
-						ʟᴇᴠᴀɴᴛᴇʀ
+						ordBot1
 ╰────────────────╯
 
 ╭────────────────
@@ -76,6 +77,7 @@ bot.addCommand(
     await message.send('```' + msg.trim() + '```')
   }
 )
+
 bot.addCommand(
   {
     pattern: 'menu ?(.*)',
@@ -93,7 +95,7 @@ bot.addCommand(
       }
     })
     const [date, time] = getDate()
-    let msg = `\`\`\`╭═══ LEVANTER ═══⊷
+    let msg = `\`\`\`╭═══ ordBot1 ═══⊷
 ┃❃╭──────────────
 ┃❃│ Prefix : ${PREFIX}
 ┃❃│ User : ${message.pushName}
