@@ -96,7 +96,7 @@ A simple WhatsApp User bot customized and maintained by **Paul Orodi**.
    BRAINSHOP = 159501,6pq8dPiYt7PdqHz3
    MAX_UPLOAD = 200
    REJECT_CALL = false
-   SUDO = 989876543210
+   SUDO = 2547928382--
    TZ = Africa/Nairobi
    VPS = true
    AUTO_STATUS_VIEW = true
