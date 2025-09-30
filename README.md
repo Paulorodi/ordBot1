@@ -1,69 +1,161 @@
 
-# ordBot1 – WhatsApp MD User Bot
 
-**ordBot1** is a simple and powerful WhatsApp MD User Bot created and maintained by **Paul Orodi**.  
-It helps automate tasks, run commands, and enhance your WhatsApp experience.
+````markdown
+# WhatsApp MD User Bot - ordBot1
 
----
+A simple WhatsApp User bot customized and maintained by **Paul Orodi**.
 
-## 🚀 Features
-- Fast and lightweight
-- Multi-deployment support (Heroku, Koyeb, VPS, Render, Replit)
-- Easy configuration with `config.env`
-- Auto-start with `pm2` on VPS
-- Extendable with plugins
+## Setup
 
----
+### 1. Deploy on Heroku
 
-## 🔧 Deployment Options
+1. **Scan QR Code:**
+   - Click [SCAN](https://qr-hazel-alpha.vercel.app/md) and scan the QR code through the "WhatsApp Linked Devices" option in your WhatsApp app.
+   - You will get a session ID in WhatsApp; copy the ID only.
 
-- **Heroku** → [Deploy Now](https://qr-hazel-alpha.vercel.app/heroku)  
-- **Koyeb** → [Deploy Now](https://qr-hazel-alpha.vercel.app/koyeb)  
-- **Render** → [Deploy Now](https://qr-hazel-alpha.vercel.app/render)  
-- **Replit** → [Run on Replit](https://replit.com/@Paulorodi/ordBot1)  
-- **VPS/PC** → Clone the repo and run with Node.js & pm2  
+2. **Create Accounts:**
+   - If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now](https://signup.heroku.com/).
+   - If you don't have a GitHub account, [sign up](https://github.com/join) now.
 
-```sh
-git clone https://github.com/Paulorodi/ordBot1
-cd ordBot1
-yarn install
-pm2 start . --name ordBot1 --attach --time
+3. **Fork Repository:**
+   - [FORK](https://github.com/Paulorodi/ordBot1/fork) this repository.
+
+4. **Deploy:**
+   - Now [DEPLOY](https://qr-hazel-alpha.vercel.app/heroku).
+
+### 2. Deploy on Koyeb
+
+1. **Create an Account:**
+   - Create an account on [Koyeb](https://app.koyeb.com/auth/signup). [Sign up now](https://app.koyeb.com/auth/signup).
+
+2. **Get Required Information:**
+   - Get the [DATABASE_URL](https://github.com/Paulorodi/ordBot1/wiki/DATABASE_URL). You'll need this while deploying.
+   - Get the [SESSION_ID](https://qr-hazel-alpha.vercel.app/md). Open Linked Devices in WhatsApp and [SCAN](https://qr-hazel-alpha.vercel.app/md) now.
+   - Get the Koyeb API key. [Let's Go](https://app.koyeb.com/account/api).
+
+3. **Deploy:**
+   - [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://qr-hazel-alpha.vercel.app/koyeb)
+   - Enter [Environment Variables](https://levanter-plugins.vercel.app/env). [Read More](https://levanter-plugins.vercel.app/env).
+   - Enter a name and click "Create Service."
+
+### 3. Deploy on VPS or PC (Example here as in Ubuntu)
+
+#### Install with Script
+
+- Run the following command:
+  ```sh
+  bash <(curl -fsSL http://bit.ly/43JqREw)
 ````
 
+#### Install without Script
+
+1. **Install Git, ffmpeg, and curl:**
+
+   ```sh
+   sudo apt -y update && sudo apt -y upgrade
+   sudo apt -y install git ffmpeg curl
+   ```
+
+2. **Install Node.js:**
+
+   ```sh
+   curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+   sudo -E bash nodesource_setup.sh
+   sudo apt-get install -y nodejs
+   ```
+
+3. **Install Yarn:**
+
+   ```sh
+   sudo npm install -g yarn
+   ```
+
+4. **Install pm2:**
+
+   ```sh
+   sudo yarn global add pm2
+   ```
+
+5. **Clone Repository and Install Packages:**
+
+   ```sh
+   git clone https://github.com/Paulorodi/ordBot1 botName
+   cd botName
+   yarn install
+   ```
+
+6. **Enter Environment Variables:**
+
+   ```sh
+   echo "SESSION_ID = Session_Id_you_Got_After_Scan_Dont_Add_This_Line_If_You_Can_Scan_From_Terminal_Itself
+   PREFIX = .
+   STICKER_PACKNAME = ordBot1
+   ALWAYS_ONLINE = false
+   RMBG_KEY = null
+   LANGUAG = en
+   WARN_LIMIT = 3
+   FORCE_LOGOUT = false
+   BRAINSHOP = 159501,6pq8dPiYt7PdqHz3
+   MAX_UPLOAD = 200
+   REJECT_CALL = false
+   SUDO = 989876543210
+   TZ = Africa/Nairobi
+   VPS = true
+   AUTO_STATUS_VIEW = true
+   SEND_READ = true
+   AJOIN = true
+   DISABLE_START_MESSAGE = false
+   PERSONAL_MESSAGE = null" > config.env
+   ```
+
+   * [Read More](https://levanter-plugins.vercel.app/env)
+
+7. **Edit `config.env` Using Nano (if needed):**
+
+   * To save, press `Ctrl + O`, then press `Enter`, and to exit, press `Ctrl + X`.
+
+8. **Start and Stop the Bot:**
+
+   * To start the bot:
+
+     ```sh
+     pm2 start . --name botName --attach --time
+     ```
+   * To stop the bot:
+
+     ```sh
+     pm2 stop botName
+     ```
+
+### 4. Deploy on Replit
+
+[![Run on Replit](https://replit.com/badge/github/Paulorodi/ordBot1)](https://replit.com/@Paulorodi/ordBot1)
+
+1. Fork the repository.
+2. Edit `config.env`.
+3. Click run.
+
+### 5. Deploy on Render
+
+1. **Create an Account:**
+
+   * Create an account on [render](https://dashboard.render.com/register). [Sign up now](https://dashboard.render.com/register).
+
+2. **Get Required Information:**
+
+   * Get the [DATABASE_URL](https://github.com/Paulorodi/ordBot1/wiki/DATABASE_URL). You'll need this while deploying.
+   * Get the [SESSION_ID](https://qr-hazel-alpha.vercel.app/md). Open Linked Devices in WhatsApp and [SCAN](https://qr-hazel-alpha.vercel.app/md) now.
+   * Get the render API key. [Let's Go](https://dashboard.render.com/u/settings#api-keys).
+
+3. **Deploy:**
+
+   * [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://qr-hazel-alpha.vercel.app/render)
+
 ---
 
-## ⚙️ Environment Variables
+### Maintainer
 
-Set these in `config.env` before running:
+* Developed and maintained by **Paul Orodi** ([GitHub](https://github.com/Paulorodi))
 
-```
-SESSION_ID = your_session_id_here
-PREFIX = .
-STICKER_PACKNAME = ordBot1
-LANGUAG = en
-SUDO = 25479283897
-TZ = Africa/Nairobi
-```
-
----
-
-## 📌 Requirements
-
-* Node.js 20+
-* Yarn
-* pm2 (for VPS/PC runs)
-
----
-
-## 🙏 Credits
-
-* Built on top of open-source WhatsApp bot frameworks
-* Customized and maintained by **Paul Orodi**
-
----
-
-## 🌐 Repository
-
-[GitHub Repo – ordBot1](https://github.com/Paulorodi/ordBot1)
 
 
