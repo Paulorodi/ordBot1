@@ -1,6 +1,4 @@
 
-
-````markdown
 # WhatsApp MD User Bot - ordBot1
 
 A simple WhatsApp User bot customized and maintained by **Paul Orodi**.
