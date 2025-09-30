@@ -43,7 +43,7 @@ A simple WhatsApp User bot customized and maintained by **Paul Orodi**.
 - Run the following command:
   ```sh
   bash <(curl -fsSL http://bit.ly/43JqREw)
-````
+
 
 #### Install without Script
 
